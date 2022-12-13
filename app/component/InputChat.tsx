@@ -13,7 +13,7 @@ type Props = {
 function InputChat({session}: Props) {
 
 const [input, setInput] = useState("");
-const {data:messages, error, mutate} = useSWR<Message[]>("api/getMessages", fetcher);
+const {data:messages, error, mutate} = useSWR<Message[]>("https://api/getMessages", fetcher);
 
 //console.log(messages);
 
