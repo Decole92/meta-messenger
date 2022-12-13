@@ -1,7 +1,9 @@
-function Head() {
+import React from 'react'
+
+function head() {
   return (
-<title>Sign In</title>
+   <title>Sign In</title>
   )
 }
 
-export default Head
+export default head
