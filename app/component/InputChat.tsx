@@ -43,7 +43,7 @@ const {data:messages, error, mutate} = useSWR<Message[]>("api/getMessages", fetc
   const uploadMessageToUpstash = async () => {
 
 
-    const data = await fetch('/api/addMessage', {
+    const data = await fetch('https://api/addMessage', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
