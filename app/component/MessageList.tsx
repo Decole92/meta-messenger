@@ -13,7 +13,7 @@ type Props = {
 
 function MessageList({initialMessage}: Props) {
 
-const {data:messages, error, mutate} = useSWR<Message[]>("https://api/getMessages", fetcher);
+const {data:messages, error, mutate} = useSWR<Message[]>("/api/getMessages", fetcher);
 
 function handleScroll() {
      window.scroll({

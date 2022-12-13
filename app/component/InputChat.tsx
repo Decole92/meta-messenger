@@ -13,7 +13,7 @@ type Props = {
 function InputChat({session}: Props) {
 
 const [input, setInput] = useState("");
-const {data:messages, error, mutate} = useSWR<Message[]>("https://api/getMessages", fetcher);
+const {data:messages, error, mutate} = useSWR<Message[]>("/api/getMessages", fetcher);
 
 //console.log(messages);
 
@@ -43,7 +43,7 @@ const {data:messages, error, mutate} = useSWR<Message[]>("https://api/getMessage
   const uploadMessageToUpstash = async () => {
 
 
-    const data = await fetch('https://api/addMessage', {
+    const data = await fetch('/api/addMessage', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
