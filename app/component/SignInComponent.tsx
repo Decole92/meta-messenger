@@ -5,12 +5,13 @@ type Props = {
     providers: Awaited<ReturnType<typeof getProviders>>;
 };
 function SignInComponent({providers}: Props) {
-  return <div className="flex justify-center">
+  return 
+      <div className="flex justify-center">
          {
        Object.values(providers!).map((provider) => (
             <div key={provider.id}>
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 py-2 rounded" onClick={() => signIn(provider.id, {
-                    callbackUrl: `https://${process.env.VERCEL_URL} || "http://localhost:3000" `
+                    callbackUrl: https://meta-messenger-h2cp8kfbo-decole92.vercel.app
                 })}>
                  Sign in with {provider.name}
                 </button>

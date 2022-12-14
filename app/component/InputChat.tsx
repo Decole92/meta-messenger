@@ -45,7 +45,7 @@ const {data:messages, error, mutate} = useSWR<Message[]>("/api/getMessages", fet
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            Accept: 'application/json',
+            
         },
         body:JSON.stringify({
             message,
