@@ -30,9 +30,7 @@ const {data:messages, error, mutate} = useSWR<Message[]>("/api/getMessages", fet
   const id = uuid();
 
   const message: Message = {
-
-
-    id, 
+     id, 
     message:messageToSend,
     created_at: Date.now(),
     username: session.user?.name as string,
@@ -47,6 +45,7 @@ const {data:messages, error, mutate} = useSWR<Message[]>("/api/getMessages", fet
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            Accept: 'application/json',
         },
         body:JSON.stringify({
             message,
