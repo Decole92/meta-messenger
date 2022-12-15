@@ -1,23 +1,20 @@
 'use client';
-import { getProviders} from "next-auth/react";
+import { getProviders } from "next-auth/react";
 import { signIn } from "next-auth/react";
 type Props = {
     providers: Awaited<ReturnType<typeof getProviders>>;
 };
 function SignInComponent({providers}: Props) {
-  return 
-      <div className="flex justify-center">
-         {
-       Object.values(providers!).map((provider) => (
+  return <div className="flex justify-center">
+         {Object.values(providers!).map((provider) => (
             <div key={provider.id}>
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 py-2 rounded" onClick={() => signIn(provider.id, {
-                    callbackUrl: "https://meta-messenger-h2cp8kfbo-decole92.vercel.app"
+                    callbackUrl: '/',
                 })}>
                  Sign in with {provider.name}
                 </button>
                 </div>
-                ))
-        }
+        ))}
     </div>
     
   
