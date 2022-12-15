@@ -9,7 +9,7 @@ async function HomePage() {
 
   
 
-const data = await fetch(`http://${process.env.VERCEL_URL}/api/getMessages`).then((res) => res.json());
+const data = await fetch(`https://${process.env.VERCEL_URL}/api/getMessages`).then((res) => res.json());
 
 const messages: Message[] = data.messages;
 
