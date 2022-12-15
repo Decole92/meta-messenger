@@ -11,10 +11,10 @@ const authOptions = {
         }),
         // ...add more providers here
     ],
-    
-secret: process.env.NEXTAUTH_SECRET,
 
- pages: {
+secret:process.env.NEXTAUTH_SECRET,
+
+app: {
     signIn:"/auth/signin",
   },
 
