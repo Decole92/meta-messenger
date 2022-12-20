@@ -14,7 +14,7 @@ const authOptions = {
 
 secret:process.env.NEXTAUTH_SECRET,
 
-app: {
+pages: {
     signIn:"/auth/signin",
   },
 
