@@ -1,17 +1,18 @@
-import '../styles/globals.css';
-import Header from './component/Header';
+import "../styles/globals.css";
+import Header from "./component/Header";
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html>
       <head />
       <body>
-              {/* @ts-expect-error Server Component */}
+        {/* @ts-expect-error Server Component */}
         <Header />
-        {children}</body>
+        {children}
+      </body>
     </html>
-  )
+  );
 }

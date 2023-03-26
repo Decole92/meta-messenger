@@ -1,9 +1,6 @@
-import React from 'react'
-
+import React from "react";
 function head() {
-  return (
-   <title>Sign In</title>
-  )
+  return <title>Sign In</title>;
 }
 
-export default head
+export default head;
